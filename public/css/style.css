@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Jost:wght@200;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main_body {
+    font-family: 'Jost', sans-serif;
+}
+
+#movieList #movie{
+    height: 60vh;
+    margin-bottom: 50px;
+    color: darkred;
+}
+
+#movieList #movie img {
+    height: 80%;
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#movie #title {
+    margin: 18px 0;
+    color: black;
+}
+
+#selectedMovie {
+    margin-top: 10px;
+    font-family: 'Dosis', sans-serif;
+    color: black;
+    margin-bottom: 10px;
+}
+#movie .overlay {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: .4s all;
+  } 
+
+  #movie:hover .overlay{
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  #movie .overlay h3{
+    padding-top: 90%;
+  }
+  
+  #movie:hover img {
+    -webkit-filter: blur(2px);
+    filter: blur(4px);
+  }
+
+
+.thumbnail {
+    margin-top: 20%;
+    width: 80%;
+    height: 85%;
+    border-radius: 5px;
+    animation-name: thumbnail;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes thumbnail {
+    0% { margin-left: 15%;}
+    100% { margin-left: 25%;}
+}
+
+
+#movie_plot {
+    margin: auto;
+    margin-top: 30px;
+    width: 84%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    color: black;
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+#selectedMovie ul li{
+    list-style-type: none;
+    color: black;
+}
+
+#homepage_div {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/different-hues-of-color-of-the-sky-2847648.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+}
+#error {
+    border: 1px solid red;
+    position: relative;
+    top: 10px;
+}
+
+#nprogress .bar {
+    background: #29d;
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px !important;
+}
+
+#movieDetailsPage {
+background-image: url(/public/images/silhouette-of-airplane-1616516.jpg); 
+background-position:center; 
+background-size: cover;
+}
+
+@media(max-width: 560px) {
+
+#movieList #movie {
+    height: 60vh;
+    width: 75%;
+    margin-bottom: 15px;
+    margin: auto;
+}
+
+#movie img {
+    max-height: 90%;
+    margin-bottom: 10px;
+}
+#movie #title {
+    margin: 0 0;
+}
+
+.thumbnail {
+    position: relative;
+    margin: auto;
+    width: 70%;
+    height: 85%;
+    margin-left: 0;
+    border-radius: 5px;
+}
+
+#selectedMovie {
+    margin-top: 30px;
+    font-family: 'Dosis', sans-serif;
+    color: black;
+    font-size: 1em;
+}
+
+#movie_plot {
+    margin: auto;
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    color: black;
+    padding: 20px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+@keyframes thumbnail {
+    0% { left: 0;}
+    100% {left: 12vw;}
+}
+
+}
+
+
